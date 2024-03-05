@@ -1,11 +1,13 @@
 import React from 'react';
+import Bio from '../components/Bio';
+import Projects from "../components/Projects";
 
 const Home: React.FC = () => {
     return (
-        <div>
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is the home page of my portfolio website.</p>
-        </div>
+    <div className="h-full">
+        <Bio />
+        <Projects />
+    </div>
     );
 }
 

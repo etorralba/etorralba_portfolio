@@ -1,16 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Note the change here
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 const App: React.FC = () => {
     return (
         <Router>
-            <div>
-                {/* Common components like header and footer can be included here */}
-                <Routes> {/* Use Routes instead of Switch */}
-                    <Route path="/" element={<Home />} /> {/* Use "element" prop instead of "component" */}
-                </Routes>
-                {/* Common components like footer can be included here */}
+            <div className='h-screen'>
+                <Navbar />
+                <div className="flex justify-center h-full">
+                    <div className="w-4/5">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                        </Routes>
+                    </div>
+                </div>
             </div>
         </Router>
     );
